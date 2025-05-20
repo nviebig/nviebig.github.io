@@ -31,20 +31,43 @@ interests:
 
 
 education:
-  - area: MSc Physics
-    institution: ETH Zurich
-    date_start: 2024-09-01
-    date_end: 2026-03-31
-
   - area: MSc Thesis Exchange
     institution: University of Oxford
     date_start: 2025-09-15
     date_end: 2026-03-14
+    summary: |
+      Master's thesis on integrating online machine learning into global climate models to perform dynamic downscaling and bias correction during runtime. The project explores how ML modules, trained on high-resolution regional simulations or reanalysis data, can correct fields like precipitation or surface winds on-the-fly and feed them back into the model. This enables cheap global models (e.g. SpeedyWeather.jl) to produce accurate high-resolution outputs while preserving physically meaningful dynamics. Co-supervised by the Exoplanet and Habitability group (Oxford) and the Seminar for Applied Mathematics (ETH).
+      
+  - area: MSc Physics
+    institution: ETH Zurich
+    date_start: 2024-09-01
+    date_end: 2026-03-31
+    summary: |
+      Focused on scientific computing, climate systems, and astrophysics. Coursework includes:
+      - Statistical Physics (core theoretical)
+      - Astrophysics II & III (core experimental)
+      - Bayesian Statistical Methods and Data Analysis
+      - Programming Techniques for Scientific Simulations I
+      - Introduction to Machine Learning
+      - Climate Systems & Climate Change Uncertainty and Risk
+      - High Performance Computing for Weather and Climate
+      - GESS: The Age of Empire, and Science–Society electives
+      - Semester project: Optical modeling and testing of a grating nuller for exoplanet detection (LIFE mission)
+
+
 
   - area: BSc Physics
     institution: ETH Zurich
     date_start: 2020-09-01
     date_end: 2024-03-31
+    summary: |
+      Comprehensive foundation in theoretical and experimental physics, with emphasis on mathematical methods and core physical principles:
+      - Linear Algebra I & II, Analysis I & II, Numerical Methods
+      - Electrodynamics, General Mechanics, Quantum Mechanics I, Theory of Heat
+      - Function Theory, Mathematical Physics I & II, Physics I–III
+      - Kernfächer: Astrophysics I, Quantum Electronics, and Introduction to Nuclear & Particle Physics
+      - Experimental labs (Physikpraktikum I–III), project work, and seminars
+      - Electives in the philosophy and ethics of science
 
    
 
@@ -101,13 +124,19 @@ awards:
     date: 2025-03-01
     awarder: START Hack
     summary: |
-      Created an interactive dashboard for sustainable land use in the Sahel. Integrated satellite and socio-environmental data for UNCCD/G20.
+      Developed an interactive geospatial dashboard integrating 20 years of satellite and socio-environmental data to support sustainable land use and conflict mitigation in the Sahel region. Selected for the UNCCD & G20 Global Land Initiative Track.
 
-  - title: SEMP Mobility Scholarship
+  - title: Swiss-European Mobility Programme (SEMP) Scholarship
     date: 2025-09-01
-    awarder: Swiss Confederation & ETH Zurich
+    awarder: ETH Zurich & Swiss Confederation
     summary: |
-      Mobility grant to support climate ML thesis at University of Oxford.
+      Awarded CHF 2,640 to support a 6-month research stay at the University of Oxford for a master's thesis on machine learning in climate modeling (SpeedyWeather.jl).
+
+  - title: Swiss Friends of Oxford University (SFOU) Scholarship
+    date: 2025-09-01
+    awarder: Swiss Friends of Oxford University
+    summary: |
+      Awarded CHF 1,350 in recognition of academic merit and research purpose to support master's thesis research at the University of Oxford.
 
 about: |
   I’m a physics master’s student at ETH Zurich with a focus on scientific machine learning, climate modeling, and exoplanetary habitability. For my thesis, I’ll be visiting the University of Oxford to work on differentiable climate simulations using SpeedyWeather.jl and Enzyme, co-supervised by Milan and Siddhartha Mishra.
