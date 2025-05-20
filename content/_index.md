@@ -28,46 +28,13 @@ sections:
 
   - block: markdown
     content:
-      title: '🌍 Projects & Direction'
+      title: 'About me'
       text: |-
-        I’m a master’s student in Physics at [ETH Zurich](https://ethz.ch/en.html), focusing on **scientific computing**, **climate modeling**, and **planetary systems**.
+        I’m a master’s student in Physics at [ETH Zurich](https://ethz.ch/en.html), focusing on  **climate modeling**, and **planetary systems** to learn more about habitability on earth and our neighbors.
+       
+        So far, I’ve worked across projects regarding planetary instrumentation, applied probabilistic modeling, and geospatial data analysis to learn about wildfires in Brazil, and applied tools from physics, statistics, and machine learning to problems in Earth and planetary science.
+        Find more about what ive worked on on [GitHub](https://github.com/nviebig). :)
 
-        So far, I’ve worked on:
-        - 🛰️ **Grating nuller prototyping** for the [LIFE Mission](https://life-space-mission.com), with Fourier optics simulations and experimental calibration for exoplanet interferometry.
-        - 🌿 **Bayesian wildfire modeling** across the Amazon Basin, forecasting spatio-temporal fire risk from meteorological and land-use data.
-        - 🌍 **Geospatial dashboard** for the Sahel (START Hack 2025), combining 20 years of land productivity, rainfall, and population data for sustainable land use.
-        - 🪐 **Coronagraph simulation tool** to optimize JWST data pipelines.
-  
-        My long-term interest is leveraging hybrid physics–ML models to Earth’s climate and exoplanetary systems — blending *theoretical physics*, *scientific software*, and *real-world impact* with the goal of understanding our planet better.
+        My goal is to learn about the use of physics-informed ML, numerical simulation, and scientific software to study climate systems, atmospheric processes, and the physical mechanisms that shape planets — both on Earth and beyond.
 
-  - block: markdown
-    content:
-      title: '🧠 Skills'
-      text: |-
-        **Programming**
-        - Python (NumPy, Pandas, ODR, Matplotlib, PyTorch)
-        - Julia (Differentiable programming, scientific computing)
-        - C++, Bash
-
-        **Scientific & Technical**
-        - Scientific ML
-        - Dynamical systems and PDEs
-        - Climate models (SpeedyWeather.jl, OpenIFS)
-        - LaTeX, Markdown
-
-        **Other**
-        - Fluent in English and German
-        - Microsoft Office Suite
-        - Git, GitHub, Linux shell
-
-  - block: markdown
-    content:
-      title: '📄 CV Snapshot'
-      text: |-
-        - MSc Physics at ETH Zurich, Thesis at Oxford (Climate ML)
-        - BSc Physics at ETH Zurich
-        - Research Analyst Intern @ Strategy& (PwC)
-        - START Hack 2025 winner (UNCCD/G20 track)
-
-        Full CV available [here](uploads/resume.pdf).
 ---

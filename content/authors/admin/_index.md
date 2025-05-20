@@ -24,10 +24,11 @@ profiles:
     url: https://www.linkedin.com/in/niklasviebig
 
 interests:
-  - Climate Modeling
-  - Exoplanet Habitability
-  - Machine Learning
+  - Habitability
+  - Climate and Earth Science
   - Scientific Computing
+  - Machine Learning
+
 
 education:
   - area: MSc Physics
@@ -45,8 +46,7 @@ education:
     date_start: 2020-09-01
     date_end: 2024-03-31
 
-    summary: |
-      Visiting student at the University of Oxford, supervised by Prof. Milan and ETH Prof. Siddhartha Mishra. Focus on differentiable climate simulation with SpeedyWeather.jl and Enzyme.
+   
 
 work:
   - position: Research Analyst Intern
@@ -117,6 +117,7 @@ about: |
   Outside of research, I’ve interned at Strategy& (PwC) where I applied AI to optimize research workflows, and at Linklaters in M&A compliance. I also enjoy hiking, competitive problem-solving, and exploring new domains at hackathons.
 ---
 
-## About Me
+## Hi, I’m Niklas
 
-Hi, im Niklas a master's student in Physics at ETH Zurich. Im nterested in scientific machine learning, climate modeling, and exoplanet science. 
+A physicist and MSc student at ETH Zurich 
+I’m passionate about using physics and scientific machine learning to understand complex systems, from Earth’s climate to exoplanetary atmospheres.
