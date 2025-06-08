@@ -24,8 +24,8 @@ profiles:
     url: https://www.linkedin.com/in/niklasviebig
 
 interests:
+  - Earth and Climate Science
   - Habitability
-  - Climate and Earth Science
   - Scientific Computing
   - Machine Learning
 
