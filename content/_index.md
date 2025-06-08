@@ -30,11 +30,12 @@ sections:
     content:
       title: 'About me'
       text: |-
-        I’m a master’s student in Physics at [ETH Zurich](https://ethz.ch/en.html), focusing on  **climate modeling**, and **planetary systems** to learn more about habitability on earth and our neighbors.
-       
-        So far, I’ve worked across projects regarding planetary instrumentation, applied probabilistic modeling, and geospatial data analysis to learn about wildfires in Brazil, and applied tools from physics, statistics, and machine learning to problems in Earth and planetary science.
-        Find more about what ive worked on on [GitHub](https://github.com/nviebig). :)
+        I’m a master's student in Physics at [ETH Zurich](https://ethz.ch/en.html), focusing on **climate modeling**, **atmospheric processes**, and **planetary systems**.
 
-        My goal is to learn about the use of physics-informed ML, numerical simulation, and scientific software to study climate systems, atmospheric processes, and the physical mechanisms that shape planets — both on Earth and beyond.
+        My current interests lie in high-resolution and efficient simulation techniques, especially in the context of **extreme events under climate change**. I’m particularly drawn to the intersection of **numerical simulation** and **machine learning**, where tools like differentiable modeling and hybrid physics–ML methods can help close the gap between global models and local impacts.
+
+        So far, I’ve worked on projects ranging from planetary instrumentation to probabilistic modeling of wildfires in Brazil and geospatial data analysis. I enjoy applying ideas from physics, statistics, and computer science to real-world Earth and planetary science problems.
+
+        You can find more of what I’ve worked on at [GitHub](https://github.com/nviebig). :)
 
 ---

@@ -137,16 +137,9 @@ awards:
     awarder: Swiss Friends of Oxford University
     summary: |
       Awarded CHF 1,350 in recognition of academic merit and research purpose to support master's thesis research at the University of Oxford.
-
-about: |
-  I’m a physics master’s student at ETH Zurich with a focus on scientific machine learning, climate modeling, and exoplanetary habitability. For my thesis, I’ll be visiting the University of Oxford to work on differentiable climate simulations using SpeedyWeather.jl and Enzyme, co-supervised by Milan and Siddhartha Mishra.
-
-  My academic interests lie at the intersection of computational science and planetary systems—modeling Earth's climate more efficiently and extending insights to extrasolar atmospheres.
-
-  Outside of research, I’ve interned at Strategy& (PwC) where I applied AI to optimize research workflows, and at Linklaters in M&A compliance. I also enjoy hiking, competitive problem-solving, and exploring new domains at hackathons.
 ---
 
 ## Hi, I’m Niklas
 
-A physicist and MSc student at ETH Zurich 
+A physicist and MSc student at ETH Zurich.
 I’m passionate about using physics and scientific machine learning to understand complex systems, from Earth’s climate to exoplanetary atmospheres.
