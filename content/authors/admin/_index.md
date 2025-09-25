@@ -141,5 +141,5 @@ awards:
 
 ## Hi, I’m Niklas
 
-A physicist and MSc student at ETH Zurich.
-I’m passionate about using physics and scientific machine learning to understand complex systems, from Earth’s climate to exoplanetary atmospheres.
+Physicist and MSc student at ETH Zurich.
+I explore complex systems— from Earth’s climate to exoplanetary atmospheres - using physics, scientific computing, and machine learning.

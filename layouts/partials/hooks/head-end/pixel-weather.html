@@ -1,0 +1,5 @@
+{{- $custom := resources.Get "js/custom.js" -}}
+{{- if $custom -}}
+  {{- $built := $custom | js.Build (dict "format" "iife" "minify" true "target" "es2018") | resources.Fingerprint "sha512" -}}
+  <script defer src="{{ $built.RelPermalink }}" integrity="{{ $built.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

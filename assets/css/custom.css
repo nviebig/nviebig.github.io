@@ -1,0 +1,161 @@
+body {
+  background-color: #ffffff;
+}
+
+#section-resume-biography-3 {
+  position: relative;
+  overflow: hidden;
+}
+
+#section-resume-biography-3 .home-section-bg {
+  background: transparent !important;
+}
+
+#section-resume-biography-3 .resume-biography,
+#section-resume-biography-3 .container,
+#section-resume-biography-3 .grid,
+#section-resume-biography-3 .blox-resume-biography-3__content {
+  position: relative;
+  z-index: 1;
+}
+
+#section-resume-biography-3 .resume-biography {
+  background: linear-gradient(135deg, rgba(15, 22, 32, 0.58), rgba(12, 19, 28, 0.32));
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  box-shadow: 0 18px 32px rgba(8, 15, 24, 0.28);
+}
+
+.pixel-weather-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(12, 22, 34, 0.55)), url('/img/london-skyline.svg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.pixel-weather-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.pixel-weather-info {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 2;
+  padding: 0.75rem 1rem;
+  border-radius: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #ffffff;
+  background: rgba(12, 22, 34, 0.8);
+  box-shadow: 0 12px 32px rgba(7, 14, 24, 0.32);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+}
+
+body.dark .pixel-weather-info {
+  background: rgba(5, 9, 16, 0.78);
+  color: #f4f7ff;
+}
+
+.pixel-weather-info__location {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  letter-spacing: 0.01em;
+}
+
+.pixel-weather-info__time {
+  font-family: 'Inter var', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pixel-weather-info__date {
+  font-size: 0.85rem;
+  opacity: 0.78;
+  margin-top: 0.1rem;
+}
+
+.pixel-weather-info__meta {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-variant-numeric: tabular-nums;
+}
+
+.pixel-weather-controls {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: rgba(10, 18, 28, 0.78);
+  box-shadow: 0 10px 26px rgba(7, 14, 24, 0.28);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.pixel-weather-controls__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.65rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #f0f6ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pixel-weather-controls__button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pixel-weather-controls__button.is-active {
+  background: linear-gradient(135deg, #20a0ff, #7c5bff);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(32, 160, 255, 0.35);
+}
+
+.pixel-weather-controls__icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+ .pixel-weather-controls__label {
+  line-height: 1;
+}
+
+@media (max-width: 680px) {
+  .pixel-weather-info {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .pixel-weather-controls {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .pixel-weather-controls__label {
+    display: none;
+  }
+}
