@@ -9,44 +9,40 @@
 </head>
 <body>
 
-  <!-- ── Header ─────────────────────────────────────────────────── -->
+  <!-- ── Top Nav ─────────────────────────────────────────────────── -->
+  <nav class="topnav" aria-label="Site navigation">
+    <div class="container topnav-inner">
+      <a href="#" class="topnav-brand">Niklas Viebig</a>
+      <ul class="topnav-links">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Profile ─────────────────────────────────────────────────── -->
   <header>
     <div class="container">
-      <div class="hero">
-        <div class="hero-text">
+      <div class="profile">
+        <img class="profile-photo" src="assets/Niklas.jpg" alt="Niklas Viebig" />
+        <div class="profile-info">
           <h1>Niklas Viebig</h1>
-          <p class="tagline">
-            Physics MSc student at ETH Zürich<br />
-            Scientific computing, climate models, and machine learning
+          <p class="profile-role">Physics MSc student · ETH Zürich</p>
+          <p class="profile-bio">
+            I'm a physics master's student at ETH Zürich. My work is at the intersection
+            of scientific computing, climate models, and machine learning. Currently doing
+            my master's thesis at the University of Oxford, making a spectral weather model
+            differentiable so that gradients can flow through the simulation and improve
+            model parameters.
           </p>
-
-          <div class="terminal" id="terminal" role="region" aria-label="Interactive terminal prompt">
-            <button
-              class="prompt"
-              id="promptBtn"
-              aria-expanded="false"
-              aria-controls="promptResponse"
-            >
-              <span class="prompt-symbol">$</span>
-              <span class="prompt-cmd">whoami</span>
-              <span class="prompt-cursor" aria-hidden="true">▌</span>
-            </button>
-            <p class="prompt-response" id="promptResponse" hidden>
-              I'm a physics student working on machine learning for weather and climate models.
-            </p>
-          </div>
-
-          <nav class="site-nav" aria-label="Page sections">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#now">Now</a>
-            <a href="#contact">Contact</a>
-            <a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv">CV ↗</a>
-          </nav>
-        </div>
-
-        <div class="hero-photo">
-          <img src="assets/Niklas.jpg" alt="Niklas Viebig" />
+          <ul class="social-links">
+            <li><a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:niklasviebig@gmail.com">Email</a></li>
+            <li><a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -54,26 +50,30 @@
 
   <main>
 
-    <!-- ── About ──────────────────────────────────────────────────── -->
-    <section id="about" aria-labelledby="about-heading">
+    <!-- ── Education ─────────────────────────────────────────────── -->
+    <section id="education" aria-labelledby="education-heading">
       <div class="container">
-        <h2 id="about-heading">About</h2>
-        <p>
-          I'm a physics master's student at ETH Zürich. My programme spans
-          theoretical and computational physics, and I've spent most of my time
-          on problems where simulation and data meet.
-        </p>
-        <p>
-          Right now I'm doing my master's thesis at the University of Oxford.
-          The project is about making a spectral weather model differentiable so
-          that gradients can flow through the simulation and be used to learn
-          better model parameters.
-        </p>
-        <p>
-          More broadly, I work on climate models, machine learning, and
-          scientific computing. I like building things — models, simulations,
-          and tools that help me (or others) understand physical systems.
-        </p>
+        <h2 id="education-heading">Education</h2>
+        <div class="edu-list">
+
+          <div class="edu-entry">
+            <span class="edu-years">2024 – Present</span>
+            <div class="edu-body">
+              <p class="edu-degree">MSc in Physics</p>
+              <p class="edu-institution">ETH Zürich</p>
+              <p class="edu-detail">Master's thesis at the University of Oxford on differentiable spectral weather models with SpeedyWeather.jl.</p>
+            </div>
+          </div>
+
+          <div class="edu-entry">
+            <span class="edu-years">2020 – 2024</span>
+            <div class="edu-body">
+              <p class="edu-degree">BSc in Physics</p>
+              <p class="edu-institution">ETH Zürich</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -87,45 +87,18 @@
       </div>
     </section>
 
-    <!-- ── Now ────────────────────────────────────────────────────── -->
-    <section id="now" aria-labelledby="now-heading">
-      <div class="container">
-        <h2 id="now-heading">Now</h2>
-        <div class="now-card">
-          <p>
-            Currently working on my master's thesis at Oxford on differentiable
-            climate models.
-          </p>
-          <p>
-            I'm interested in scientific machine learning, weather models, and
-            simulation-based research.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- ── Contact ────────────────────────────────────────────────── -->
     <section id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <h2 id="contact-heading">Contact</h2>
-        <ul class="contact-list">
-          <li>
-            <span class="contact-label">Email</span>
-            <a href="mailto:niklasviebig@gmail.com">niklasviebig@gmail.com</a>
-          </li>
-          <li>
-            <span class="contact-label">GitHub</span>
-            <a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">nviebig</a>
-          </li>
-          <li>
-            <span class="contact-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">nviebig</a>
-          </li>
-          <li>
-            <span class="contact-label">CV</span>
-            <a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer">Download PDF ↗</a>
-          </li>
-        </ul>
+        <p>
+          Feel free to reach out via
+          <a href="mailto:niklasviebig@gmail.com">niklasviebig@gmail.com</a>.
+          You can also find me on
+          <a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">GitHub</a>
+          and
+          <a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+        </p>
       </div>
     </section>
 
@@ -133,7 +106,7 @@
 
   <footer>
     <div class="container">
-      <p>Niklas Viebig &middot; <span id="year"></span></p>
+      <p>© Niklas Viebig <span id="year"></span></p>
     </div>
   </footer>
 

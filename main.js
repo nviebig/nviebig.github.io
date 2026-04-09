@@ -88,25 +88,6 @@ function renderProjects() {
   list.appendChild(fragment);
 }
 
-/* ── Terminal prompt interaction ───────────────────────────────── */
-function initPrompt() {
-  const btn = document.getElementById("promptBtn");
-  const response = document.getElementById("promptResponse");
-  if (!btn || !response) return;
-
-  btn.addEventListener("click", function () {
-    const isExpanded = btn.getAttribute("aria-expanded") === "true";
-
-    if (isExpanded) {
-      response.hidden = true;
-      btn.setAttribute("aria-expanded", "false");
-    } else {
-      response.hidden = false;
-      btn.setAttribute("aria-expanded", "true");
-    }
-  });
-}
-
 /* ── Footer year ───────────────────────────────────────────────── */
 function setYear() {
   const el = document.getElementById("year");
@@ -116,6 +97,5 @@ function setYear() {
 /* ── Init ──────────────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", function () {
   renderProjects();
-  initPrompt();
   setYear();
 });
