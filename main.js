@@ -5,6 +5,7 @@ const projects = [
     description:
       "Master's thesis at Oxford. Working on making a weather model differentiable " +
       "so gradients can be used to improve parameters.",
+    tags: ["Julia", "SciML", "Climate"],
     link: null,
   },
   {
@@ -12,6 +13,7 @@ const projects = [
     description:
       "Project from the HPC for Weather and Climate course. Studied performance and " +
       "scaling on the Alps supercomputer at CSCS.",
+    tags: ["HPC", "C++", "Numerical Methods"],
     link: null,
   },
   {
@@ -19,6 +21,7 @@ const projects = [
     description:
       "Interactive dashboard using geospatial data to explore land use and " +
       "environmental change in the Sahel region.",
+    tags: ["Python", "GIS", "Data Viz"],
     link: null,
   },
   {
@@ -26,12 +29,14 @@ const projects = [
     description:
       "Spatio-temporal model predicting wildfire activity using meteorological and " +
       "land-use data.",
+    tags: ["Python", "Bayesian", "ML"],
     link: null,
   },
   {
     title: "JWST Exoplanet Detection Simulator",
     description:
       "Python simulation tool for coronagraphic observations with JWST.",
+    tags: ["Python", "Astrophysics", "Simulation"],
     link: null,
   },
 ];
@@ -54,6 +59,18 @@ function renderProjects() {
     const p = document.createElement("p");
     p.textContent = project.description;
     li.appendChild(p);
+
+    if (project.tags && project.tags.length) {
+      const tagRow = document.createElement("div");
+      tagRow.className = "project-tags";
+      project.tags.forEach(function (tag) {
+        const span = document.createElement("span");
+        span.className = "project-tag";
+        span.textContent = tag;
+        tagRow.appendChild(span);
+      });
+      li.appendChild(tagRow);
+    }
 
     if (project.link) {
       const a = document.createElement("a");
