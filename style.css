@@ -246,7 +246,7 @@ main > section:nth-child(3) { animation: fadeUp 0.55s ease 0.32s both; }
   font-family: var(--mono);
   font-size: 0.75rem;
   color: var(--text-muted);
-  min-width: 11ch;
+  width: 14ch;
   flex-shrink: 0;
   padding-top: 0.2rem;
 }
@@ -271,6 +271,17 @@ main > section:nth-child(3) { animation: fadeUp 0.55s ease 0.32s both; }
   margin-top: 0.35rem !important;
   max-width: 55ch;
   line-height: 1.5;
+}
+
+.edu-courses {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem !important;
+  max-width: 60ch;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
 }
 
 /* ── Projects ──────────────────────────────────────────────────── */
@@ -348,9 +359,14 @@ main > section:nth-child(3) { animation: fadeUp 0.55s ease 0.32s both; }
   letter-spacing: 0.02em;
 }
 
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.65rem;
+}
+
 .project-card .project-link {
   display: inline-block;
-  margin-top: 0.65rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--accent);
@@ -387,7 +403,7 @@ footer {
     gap: 0.2rem;
   }
 
-  .edu-years { min-width: unset; }
+  .edu-years { width: unset; }
 
   .topnav-links { gap: 0; }
   .topnav-links a { padding: 0.3rem 0.4rem; font-size: 0.78rem; }
