@@ -3,8 +3,8 @@ const projects = [
   {
     title: "Differentiable Atmospheric Modeling with SpeedyWeather.jl",
     description:
-      "Master's thesis at Oxford. Working on making a weather model differentiable " +
-      "so gradients can be used to improve parameters.",
+      "Master's thesis completed as a visiting researcher at Oxford. " +
+      "Made SpeedyWeather.jl differentiable so gradients can be used to optimize model parameters.",
     tags: ["Julia", "SciML", "Climate"],
     link: null,
   },
