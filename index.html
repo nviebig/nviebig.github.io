@@ -3,79 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Niklas Viebig – Physics MSc student at ETH Zürich. Scientific computing, climate models, and machine learning." />
+  <meta name="description" content="Niklas Viebig – Physics MSc at ETH Zürich. Scientific computing, climate models, machine learning." />
   <title>Niklas Viebig</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ── Top Nav ─────────────────────────────────────────────────── -->
-  <nav class="topnav" aria-label="Site navigation">
-    <div class="container topnav-inner">
-      <a href="#" class="topnav-brand">Niklas Viebig</a>
-      <ul class="topnav-links">
+  <!-- starfield canvas — full page, behind everything -->
+  <canvas id="starfield"></canvas>
+
+  <nav class="topnav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">NV</a>
+      <ul class="nav-links">
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+        <li><a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv">CV ↗</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ── Profile ─────────────────────────────────────────────────── -->
-  <header>
-    <div class="container">
-      <div class="profile">
-        <img class="profile-photo" src="assets/Niklas.jpg" alt="Niklas Viebig" />
-        <div class="profile-info">
-          <h1>Niklas Viebig</h1>
-          <p class="profile-role">Physics MSc student · ETH Zürich</p>
-          <p class="profile-bio">
-            I'm a physics master's student at ETH Zürich, working at the intersection of
-            scientific computing, climate models, and machine learning. For my thesis, I spent
-            time at the University of Oxford as a visiting researcher — making a spectral
-            weather model differentiable so that gradients can flow through the simulation
-            and improve model parameters.
-          </p>
-          <ul class="social-links">
-            <li><a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="mailto:niklasviebig@gmail.com">Email</a></li>
-            <li><a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
-          </ul>
+  <!-- ─── HERO ──────────────────────────────────────────────────── -->
+  <section class="hero">
+
+    <!-- atmospheric rings — behind content, visible around photo -->
+    <div class="atmo-rings" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+
+    <div class="hero-top">
+      <span class="mono-sm">47.4°N · 8.5°E · ETH ZÜRICH</span>
+      <span class="status-pill"><span class="live-dot"></span>MSC CANDIDATE</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <h1>Niklas<br>Viebig</h1>
+        <div class="h-rule"></div>
+        <p class="hero-disc mono-sm">Physics · Computation · Climate</p>
+        <p class="hero-bio">
+          Physics master's student at ETH Zürich, working at the intersection
+          of scientific computing, climate models, and machine learning.
+          Visiting researcher at Oxford — making SpeedyWeather differentiable
+          so that gradients can flow through the simulation and improve
+          model parameters.
+        </p>
+        <ul class="hero-links">
+          <li><a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+          <li><a href="mailto:niklasviebig@gmail.com">Email ↗</a></li>
+          <li><a href="assets/NiklasViebigCV.pdf" target="_blank" rel="noopener noreferrer">CV ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="photo-bracket">
+          <img src="assets/Niklas.jpg" alt="Niklas Viebig" class="hero-photo" />
         </div>
+        <p class="mono-sm photo-loc">OXFORD · 51.7°N · 1.3°W</p>
       </div>
     </div>
-  </header>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="mono-sm">scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
 
   <main>
 
-    <!-- ── Education ─────────────────────────────────────────────── -->
-    <section id="education" aria-labelledby="education-heading">
+    <section id="education" class="content-section reveal">
       <div class="container">
-        <h2 id="education-heading">Education</h2>
+        <div class="sec-label">
+          <span class="mono-sm accent">01 /</span>
+          <h2>Education</h2>
+        </div>
         <div class="edu-list">
 
-          <div class="edu-entry">
-            <span class="edu-years">2024 – Present</span>
+          <div class="edu-row">
+            <div class="edu-year mono-sm">2024 – Now</div>
             <div class="edu-body">
-              <p class="edu-degree">MSc in Physics</p>
-              <p class="edu-institution">ETH Zürich</p>
-              <p class="edu-detail">Thesis: <em>Automatic Differentiation for Climate Model Calibration</em> — visiting researcher, University of Oxford.</p>
-              <p class="edu-courses">HPC for Weather &amp; Climate · Bayesian Statistics · Geophysical Fluid Dynamics · Scientific Computing · Climate Systems · Machine Learning</p>
+              <p class="edu-degree">MSc Physics</p>
+              <p class="edu-inst">ETH Zürich</p>
+              <p class="edu-thesis">Thesis: <em>Automatic Differentiation for Climate Model Calibration</em> — visiting researcher, University of Oxford.</p>
+              <p class="edu-courses mono-sm">HPC for Weather &amp; Climate · Bayesian Statistics · Geophysical Fluid Dynamics · Scientific Computing · Climate Systems · Machine Learning</p>
             </div>
           </div>
 
-          <div class="edu-entry">
-            <span class="edu-years">2020 – 2024</span>
+          <div class="edu-row">
+            <div class="edu-year mono-sm">2020 – 2024</div>
             <div class="edu-body">
-              <p class="edu-degree">BSc in Physics</p>
-              <p class="edu-institution">ETH Zürich</p>
-              <p class="edu-detail">Thesis: <em>Simulating Coronagraphic Exoplanet Detection with JWST</em> — astrophysics focus on exoplanet detection and observational methods.</p>
-              <p class="edu-courses">Astrophysics · Nuclear &amp; Particle Physics · Quantum Electronics · Numerical Methods · Computer Science</p>
+              <p class="edu-degree">BSc Physics</p>
+              <p class="edu-inst">ETH Zürich</p>
+              <p class="edu-thesis">Thesis: <em>Simulating Coronagraphic Exoplanet Detection with JWST</em> — astrophysics focus on exoplanet detection and observational methods.</p>
+              <p class="edu-courses mono-sm">Astrophysics · Nuclear &amp; Particle Physics · Quantum Electronics · Numerical Methods · Computer Science</p>
             </div>
           </div>
 
@@ -83,36 +112,36 @@
       </div>
     </section>
 
-    <!-- ── Projects ───────────────────────────────────────────────── -->
-    <section id="projects" aria-labelledby="projects-heading">
+    <section id="projects" class="content-section reveal">
       <div class="container">
-        <h2 id="projects-heading">Selected Projects</h2>
-        <ul class="project-list" id="projectList" role="list">
-          <!-- populated by main.js -->
-        </ul>
+        <div class="sec-label">
+          <span class="mono-sm accent">02 /</span>
+          <h2>Selected Projects</h2>
+        </div>
+        <ul class="project-list" id="projectList" role="list"></ul>
       </div>
     </section>
 
-    <!-- ── Contact ────────────────────────────────────────────────── -->
-    <section id="contact" aria-labelledby="contact-heading">
+    <section id="contact" class="content-section reveal">
       <div class="container">
-        <h2 id="contact-heading">Contact</h2>
-        <p>
-          Feel free to reach out via
-          <a href="mailto:niklasviebig@gmail.com">niklasviebig@gmail.com</a>.
-          You can also find me on
-          <a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">GitHub</a>
-          and
-          <a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+        <div class="sec-label">
+          <span class="mono-sm accent">03 /</span>
+          <h2>Contact</h2>
+        </div>
+        <p class="contact-text">
+          Reach out via <a href="mailto:niklasviebig@gmail.com">niklasviebig@gmail.com</a>,
+          or find me on <a href="https://github.com/nviebig" target="_blank" rel="noopener noreferrer">GitHub</a>
+          and <a href="https://www.linkedin.com/in/nviebig" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
         </p>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="container">
-      <p>© Niklas Viebig <span id="year"></span></p>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span class="mono-sm">© NIKLAS VIEBIG <span id="year"></span></span>
+      <span class="mono-sm">ETH ZÜRICH · OXFORD</span>
     </div>
   </footer>
 
