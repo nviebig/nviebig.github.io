@@ -1,7 +1,7 @@
-/* ── Reset ─────────────────────────────────────────────────────── */
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Tokens ────────────────────────────────────────────────────── */
+/* Tokens */
 :root {
   --bg:      #05080f;
   --text:    #b8cfe0;
@@ -19,7 +19,7 @@
   --px:  clamp(1.25rem, 4vw, 2.5rem);
 }
 
-/* ── Base ──────────────────────────────────────────────────────── */
+/* Base */
 html { font-size: 16px; scroll-behavior: smooth; color-scheme: dark; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -35,7 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Utility ───────────────────────────────────────────────────── */
+/* Utility */
 .mono-sm {
   font-family: var(--mono);
   font-size: 0.62rem;
@@ -57,7 +57,7 @@ p { max-width: 65ch; }
 :focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
 a { color: inherit; text-decoration: none; }
 
-/* ── Keyframes ─────────────────────────────────────────────────── */
+/* Keyframes */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -73,12 +73,7 @@ a { color: inherit; text-decoration: none; }
   50%       { transform: translateY(7px); }
 }
 
-@keyframes ring-breathe {
-  0%, 100% { transform: translateY(-50%) scale(1); }
-  50%       { transform: translateY(-50%) scale(1.018); }
-}
-
-/* ── Starfield canvas ──────────────────────────────────────────── */
+/* Starfield canvas */
 #starfield {
   position: fixed;
   inset: 0;
@@ -88,7 +83,7 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
 }
 
-/* ── Navigation ────────────────────────────────────────────────── */
+/* Navigation */
 .topnav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -138,7 +133,7 @@ a { color: inherit; text-decoration: none; }
 .nav-cv:hover { background: var(--a06) !important; border-color: rgba(0,200,232,0.35) !important; }
 
 /* ═══════════════════════════════════════════════════════════════
-   HERO  — transparent, canvas starfield shows through
+   HERO - transparent, canvas starfield shows through
 ═══════════════════════════════════════════════════════════════ */
 .hero {
   position: relative;
@@ -159,31 +154,7 @@ a { color: inherit; text-decoration: none; }
   );
 }
 
-/* ── Atmospheric rings (climate / planetary layers) ────────────── */
-.atmo-rings {
-  position: absolute;
-  right: -12%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 680px;
-  height: 680px;
-  pointer-events: none;
-  z-index: 0;
-  animation: ring-breathe 11s ease-in-out infinite;
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(0,200,232,0.09);
-}
-.ring:nth-child(1) { inset: 0; }
-.ring:nth-child(2) { inset: 64px;  opacity: 0.85; }
-.ring:nth-child(3) { inset: 128px; opacity: 0.68; }
-.ring:nth-child(4) { inset: 192px; opacity: 0.50; }
-.ring:nth-child(5) { inset: 256px; opacity: 0.30; }
-
-/* ── Hero top bar ──────────────────────────────────────────────── */
+/* Hero top bar */
 .hero-top {
   position: relative;
   z-index: 2;
@@ -216,7 +187,7 @@ a { color: inherit; text-decoration: none; }
   animation: live-pulse 2.5s ease-in-out infinite;
 }
 
-/* ── Hero content grid ─────────────────────────────────────────── */
+/* Hero content grid */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -283,7 +254,7 @@ h1 {
   background: var(--a06);
 }
 
-/* ── Photo frame ───────────────────────────────────────────────── */
+/* Photo frame */
 .hero-right {
   position: relative;
   z-index: 2;
@@ -327,7 +298,7 @@ h1 {
 
 .photo-loc { color: var(--text-md); }
 
-/* ── Scroll cue ────────────────────────────────────────────────── */
+/* Scroll cue */
 .scroll-cue {
   position: absolute;
   bottom: 2rem;
@@ -351,7 +322,7 @@ h1 {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   CONTENT SECTIONS — solid bg so canvas + scene are covered
+   CONTENT SECTIONS - solid bg so canvas + scene are covered
 ═══════════════════════════════════════════════════════════════ */
 .content-section {
   position: relative;
@@ -377,7 +348,7 @@ h2 {
   color: var(--text-md);
 }
 
-/* ── Scroll reveal ─────────────────────────────────────────────── */
+/* Scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -385,7 +356,7 @@ h2 {
 }
 .reveal.revealed { opacity: 1; transform: none; }
 
-/* ── Education ─────────────────────────────────────────────────── */
+/* Education */
 .edu-list { border-top: 1px solid var(--a12); }
 
 .edu-row {
@@ -424,7 +395,7 @@ h2 {
   line-height: 1.9;
 }
 
-/* ── Projects ──────────────────────────────────────────────────── */
+/* Projects */
 .project-list { list-style: none; border-top: 1px solid var(--a12); }
 
 .project-row {
@@ -504,7 +475,70 @@ h2 {
   white-space: nowrap;
 }
 
-/* ── Contact ───────────────────────────────────────────────────── */
+/* Research / Environmental Modeling */
+.research-intro {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 65ch;
+  margin-bottom: 1.2rem;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.research-card {
+  padding: 1.5rem;
+  border: 1px solid var(--a12);
+  border-radius: 6px;
+  background: rgba(0, 200, 232, 0.02);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.research-card:hover {
+  background: var(--a06);
+  border-color: rgba(0, 200, 232, 0.25);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-hi);
+  margin-bottom: 0.6rem;
+  max-width: none;
+}
+
+.card-desc {
+  font-size: 0.875rem;
+  color: var(--text);
+  line-height: 1.6;
+  max-width: none;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.card-tag {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--a12);
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+}
+
+/* Contact */
 .contact-text { font-size: 0.95rem; color: var(--text); }
 
 .contact-text a {
@@ -515,7 +549,7 @@ h2 {
 }
 .contact-text a:hover { border-color: var(--accent); }
 
-/* ── Footer ────────────────────────────────────────────────────── */
+/* Footer */
 .site-footer {
   position: relative;
   z-index: 1;
@@ -530,10 +564,8 @@ h2 {
   align-items: center;
 }
 
-/* ── Mobile ────────────────────────────────────────────────────── */
+/* Mobile */
 @media (max-width: 700px) {
-.atmo-rings { right: -40%; width: 420px; height: 420px; opacity: 0.5; }
-
   .hero-content { grid-template-columns: 1fr; padding-bottom: 4rem; }
 
   .hero-right {
@@ -551,6 +583,8 @@ h2 {
 
   .project-row { grid-template-columns: 2.5rem 1fr; }
   .p-domain { display: none; }
+
+  .research-grid { grid-template-columns: 1fr; }
 
   .hero-top { padding-top: 4.5rem; }
   .footer-row { flex-direction: column; gap: 0.3rem; }

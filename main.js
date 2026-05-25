@@ -1,4 +1,4 @@
-/* ── Canvas starfield ──────────────────────────────────────────── */
+/* Canvas starfield */
 (function () {
   const canvas = document.getElementById('starfield');
   if (!canvas) return;
@@ -9,7 +9,7 @@
   resize();
   window.addEventListener('resize', resize);
 
-  /* Stars — cooler whites, hint of blue and teal (climate palette) */
+  /* Stars - cooler whites, hint of blue and teal (climate palette) */
   const STARS = 260;
   const stars = Array.from({ length: STARS }, () => ({
     x:     Math.random(),
@@ -20,7 +20,7 @@
     hue:   [205, 210, 220, 270][Math.floor(Math.random() * 4)],
   }));
 
-  /* Nebula glows — atmospheric cyan, deep space blue, earth teal */
+  /* Nebula glows - atmospheric cyan, deep space blue, earth teal */
   const nebulae = [
     { x: 0.78, y: 0.28, r: 0.42, rgb: [0,  185, 220], a: 0.065 },
     { x: 0.12, y: 0.65, r: 0.36, rgb: [60, 40,  210], a: 0.055 },
@@ -46,7 +46,7 @@
     const W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
 
-    /* Nebulae — breathe slowly */
+    /* Nebulae - breathe slowly */
     nebulae.forEach(n => {
       const b = 0.84 + 0.16 * Math.sin(ts * 0.00021 + n.x * 4.8);
       const g = ctx.createRadialGradient(n.x*W, n.y*H, 0, n.x*W, n.y*H, n.r * Math.max(W,H) * b);
@@ -56,7 +56,7 @@
       ctx.fillRect(0, 0, W, H);
     });
 
-    /* Stars — twinkle */
+    /* Stars - twinkle */
     stars.forEach(s => {
       const br = 0.28 + 0.72 * (0.5 + 0.5 * Math.sin(ts * s.speed + s.phase));
       ctx.beginPath();
@@ -88,7 +88,7 @@
   requestAnimationFrame(draw);
 })();
 
-/* ── Nav: becomes visible glass on scroll ──────────────────────── */
+/* Nav: becomes visible glass on scroll */
 (function () {
   const nav = document.querySelector('.topnav');
   if (!nav) return;
@@ -97,7 +97,7 @@
   tick();
 })();
 
-/* ── Scroll reveal ─────────────────────────────────────────────── */
+/* Scroll reveal */
 (function () {
   const io = new IntersectionObserver(
     entries => entries.forEach(e => {
@@ -108,7 +108,7 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 
-/* ── Domain definitions ────────────────────────────────────────── */
+/* Domain definitions */
 const DOMAIN = {
   climate: { label: 'Climate',      color: '#00c8e8' },
   astro:   { label: 'Astrophysics', color: '#6080f0' },
@@ -117,7 +117,7 @@ const DOMAIN = {
   geo:     { label: 'Geospatial',   color: '#20b068' },
 };
 
-/* ── Projects data ─────────────────────────────────────────────── */
+/* Projects data */
 const projects = [
   {
     title: "Automatic Differentiation for Climate Model Calibration",
@@ -134,28 +134,28 @@ const projects = [
   },
   {
     title: "Optimized Matrix-Free Smoothers for Stokes Equations",
-    description: "3D blocking for matrix-free smoothers in variable-viscosity Stokes equations — over 90% weak-scaling efficiency up to 64 cores and 3× speedup on the Alps supercomputer at CSCS.",
+    description: "3D blocking for matrix-free smoothers in variable-viscosity Stokes equations: over 90% weak-scaling efficiency up to 64 cores and 3× speedup on the Alps supercomputer at CSCS.",
     tags: ["HPC", "C++", "Numerical Methods"],
     domain: 'hpc',
     paper: "https://arxiv.org/abs/2509.19061v1",
   },
   {
     title: "JWST Exoplanet Detection Simulator",
-    description: "Bachelor's thesis. Python simulation tool for coronagraphic observations with JWST/MIRI — modelling point-spread functions and contrast limits for direct exoplanet imaging.",
+    description: "Bachelor's thesis. Python simulation tool for coronagraphic observations with JWST/MIRI: modelling point-spread functions and contrast limits for direct exoplanet imaging.",
     tags: ["Python", "Astrophysics", "Simulation"],
     domain: 'astro',
     link: "https://github.com/nviebig/JWST-MIRI-Detection-Simulator",
   },
   {
     title: "Grating Nuller Optical Simulation",
-    description: "Simulation and theoretical analysis of a grating nuller for high-contrast starlight suppression — modelling destructive interference patterns to enable direct exoplanet imaging.",
+    description: "Simulation and theoretical analysis of a grating nuller for high-contrast starlight suppression: modelling destructive interference patterns to enable direct exoplanet imaging.",
     tags: ["Python", "Optics", "Astrophysics"],
     domain: 'astro',
     link: "https://github.com/nviebig/Grating-Nuller-Analysis",
   },
   {
     title: "Galaxy Morphology Analysis",
-    description: "End-to-end pipeline for morphological classification of galaxies M49, M51, M81 — data reduction, astrometric calibration, and 2D Sersic profile fitting with GalFit.",
+    description: "End-to-end pipeline for morphological classification of galaxies M49, M51, M81: data reduction, astrometric calibration, and 2D Sersic profile fitting with GalFit.",
     tags: ["Python", "Astrophysics", "Image Processing"],
     domain: 'astro',
     link: "https://github.com/nviebig/galaxy-morphology-analysis",
@@ -175,7 +175,7 @@ const projects = [
   },
 ];
 
-/* ── Render project rows ───────────────────────────────────────── */
+/* Render project rows */
 function renderProjects() {
   const list = document.getElementById('projectList');
   if (!list) return;
@@ -258,7 +258,7 @@ function renderProjects() {
   list.appendChild(frag);
 }
 
-/* ── Init ──────────────────────────────────────────────────────── */
+/* Init */
 document.addEventListener('DOMContentLoaded', function () {
   renderProjects();
   const yr = document.getElementById('year');
