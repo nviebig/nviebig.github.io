@@ -88,24 +88,27 @@
   requestAnimationFrame(draw);
 })();
 
-/* Nav: becomes visible glass on scroll */
+/* Tabbed panels: one visible at a time, switched via rail buttons + hash */
 (function () {
-  const nav = document.querySelector('.topnav');
-  if (!nav) return;
-  const tick = () => nav.classList.toggle('is-scrolled', window.scrollY > 80);
-  window.addEventListener('scroll', tick, { passive: true });
-  tick();
-})();
+  const buttons = Array.from(document.querySelectorAll('.rail-btn'));
+  const panels = Array.from(document.querySelectorAll('.panel'));
+  if (!buttons.length || !panels.length) return;
 
-/* Scroll reveal */
-(function () {
-  const io = new IntersectionObserver(
-    entries => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
-    }),
-    { threshold: 0.07 }
-  );
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  function showTab(id, updateHash) {
+    const target = panels.find(p => p.id === id);
+    if (!target) return;
+    panels.forEach(p => p.classList.toggle('is-active', p === target));
+    buttons.forEach(b => b.classList.toggle('is-active', b.dataset.tab === id));
+    target.scrollTop = 0;
+    if (updateHash) history.replaceState(null, '', '#' + id);
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => showTab(btn.dataset.tab, true));
+  });
+
+  const initial = location.hash.replace('#', '');
+  if (initial && panels.some(p => p.id === initial)) showTab(initial, false);
 })();
 
 /* Domain definitions */
